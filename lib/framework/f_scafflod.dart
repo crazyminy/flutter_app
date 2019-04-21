@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/demo/basic_demo.dart';
 import 'package:flutter_app/model/products.dart';
+import '../demo/layoutDemo.dart';
 
 class f_scafflod extends StatelessWidget {
   @override
@@ -41,7 +42,7 @@ class f_scafflod extends StatelessWidget {
           children: <Widget>[
             MyListview(),
             BasicDemo(),
-            Icon(Icons.library_books, size: 128.0, color: Colors.black12),
+            LayoutDemo(),
           ],
         ),
         drawer: MyDraw(),

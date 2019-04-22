@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/demo/basic_demo.dart';
 import 'package:flutter_app/model/products.dart';
 import '../demo/layoutDemo.dart';
+import '../demo/view_demo.dart';
 
 class f_scafflod extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
@@ -35,6 +36,7 @@ class f_scafflod extends StatelessWidget {
               Tab(icon: Icon(Icons.local_florist)),
               Tab(icon: Icon(Icons.change_history)),
               Tab(icon: Icon(Icons.directions_bike)),
+              Tab(icon: Icon(Icons.local_pizza)),
             ],
           ),
         ),
@@ -43,6 +45,7 @@ class f_scafflod extends StatelessWidget {
             MyListview(),
             BasicDemo(),
             LayoutDemo(),
+            ViewDemo(),
           ],
         ),
         drawer: MyDraw(),

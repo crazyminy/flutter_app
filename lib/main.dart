@@ -16,9 +16,11 @@ class MyApp extends StatelessWidget {
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
         splashColor: Colors.white70
       ),
-      home: NavigatorDemo(),
+      //home: NavigatorDemo(),
       routes: {
-        '/about':(context)=>Page(title: 'About',)
+        '/':(context)=> NavigatorDemo(),
+        '/about':(context)=>Page(title: 'About',),
+        '/home':(context)=>f_scafflod(),
       },
     );
   }

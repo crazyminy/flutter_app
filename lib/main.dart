@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/framework/f_scafflod.dart';
 import './demo/sliver_demo.dart';
+import './demo/navigator_demo.dart';
 
 void main()=>runApp(MyApp());
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
         splashColor: Colors.white70
       ),
-      home: f_scafflod(),
+      home: NavigatorDemo(),
     );
   }
 }

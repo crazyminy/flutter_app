@@ -17,6 +17,9 @@ class MyApp extends StatelessWidget {
         splashColor: Colors.white70
       ),
       home: NavigatorDemo(),
+      routes: {
+        '/about':(context)=>Page(title: 'About',)
+      },
     );
   }
 }

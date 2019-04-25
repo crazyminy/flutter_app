@@ -31,12 +31,40 @@ class _RegisterFormState extends State<RegisterForm> {
 
   final registerFormKey = GlobalKey<FormState>();
   String userName,password;
+  bool autoValidate = false;
 
   void submitRegisterForm(){
-    registerFormKey.currentState.save();
+    if(registerFormKey.currentState.validate()){
+      registerFormKey.currentState.save();
 
-    debugPrint('userName:$userName');
-    debugPrint('password:$password');
+      debugPrint('userName:$userName');
+      debugPrint('password:$password');
+      
+      Scaffold.of(context).showSnackBar(
+        SnackBar(content: Text('registering...')),
+      );
+    }else{
+      setState(() {
+        autoValidate = true;
+      });
+
+    }
+
+
+  }
+
+  String validatorUserName(value){
+    if(value.isEmpty){
+      return 'userName is required';
+    }
+    return null;
+  }
+
+  String validatorPassword(value ){
+    if(value.isEmpty){
+      return 'password is required';
+    }
+    return null;
   }
 
   @override
@@ -52,6 +80,8 @@ class _RegisterFormState extends State<RegisterForm> {
             onSaved: (value){
               userName = value;
             },
+            validator: validatorUserName,
+            autovalidate: autoValidate,
           ),
           TextFormField(
             obscureText: true,
@@ -61,6 +91,8 @@ class _RegisterFormState extends State<RegisterForm> {
             onSaved: (value){
               password = value;
             },
+            validator: validatorPassword,
+            autovalidate: autoValidate,
           ),
           SizedBox(height: 30.0,),
           Container(

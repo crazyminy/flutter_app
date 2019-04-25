@@ -41,6 +41,43 @@ class ButtonDemo extends StatelessWidget {
       ],
     );
 
+    final Widget RaisedButtonDemo  = Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Theme(
+          data: Theme.of(context).copyWith(
+            buttonColor: Theme.of(context).accentColor,
+            buttonTheme: ButtonThemeData(
+                textTheme: ButtonTextTheme.primary,
+                shape: StadiumBorder()
+            ),
+          ),
+          child: RaisedButton.icon(
+            icon: Icon(Icons.subject),
+            label: Text('Button'),
+            onPressed: (){},
+            splashColor: Colors.grey,
+            elevation:21.0,
+          ),
+        ),
+        RaisedButton(
+          child: Text('Button'),
+          onPressed: (){},
+          splashColor: Colors.grey,
+          textColor: Theme.of(context).accentColor,
+          elevation: 12.0,
+        ),
+        SizedBox(width: 21.0,),
+        RaisedButton.icon(
+          icon: Icon(Icons.subject),
+          label: Text('Button'),
+          onPressed: (){},
+          splashColor: Colors.grey,
+          elevation:21.0,
+        ),
+      ],
+    );
+
 
     return Scaffold(
       appBar: AppBar(title: Text('ButtonDemo'),),
@@ -52,6 +89,22 @@ class ButtonDemo extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                Theme(
+                  data: Theme.of(context).copyWith(
+                    buttonColor: Theme.of(context).accentColor,
+                    buttonTheme: ButtonThemeData(
+                      textTheme: ButtonTextTheme.primary,
+                      shape: StadiumBorder()
+                    ),
+                  ),
+                  child: RaisedButton.icon(
+                    icon: Icon(Icons.subject),
+                    label: Text('Button'),
+                    onPressed: (){},
+                    splashColor: Colors.grey,
+                    elevation:21.0,
+                  ),
+                ),
                 RaisedButton(
                   child: Text('Button'),
                   onPressed: (){},

@@ -19,12 +19,85 @@ class MaterialComponent extends StatelessWidget {
 }
 
 class ButtonDemo extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+
+    final Widget FlatButtonDemo = Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        FlatButton(
+          child: Text('Button'),
+          onPressed: (){},
+          splashColor: Colors.grey,
+          textColor: Theme.of(context).accentColor,
+        ),
+        FlatButton.icon(
+          icon: Icon(Icons.subject),
+          label: Text('Button'),
+          onPressed: (){},
+          splashColor: Colors.grey,
+        ),
+      ],
+    );
+
+
+    return Scaffold(
+      appBar: AppBar(title: Text('ButtonDemo'),),
+      body: Container(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                RaisedButton(
+                  child: Text('Button'),
+                  onPressed: (){},
+                  splashColor: Colors.grey,
+                  textColor: Theme.of(context).accentColor,
+                  elevation: 12.0,
+                ),
+                SizedBox(width: 21.0,),
+                RaisedButton.icon(
+                  icon: Icon(Icons.subject),
+                  label: Text('Button'),
+                  onPressed: (){},
+                  splashColor: Colors.grey,
+                  elevation:21.0,
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
 
+class _WidgetDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('_WidgetDemo'),),
+      body: Container(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 class ListItem extends StatelessWidget {
 

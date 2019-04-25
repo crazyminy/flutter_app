@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/framework/f_scafflod.dart';
 import './demo/sliver_demo.dart';
 import './demo/navigator_demo.dart';
+import './demo/form_demo.dart';
 
 void main()=>runApp(MyApp());
 
@@ -17,10 +18,12 @@ class MyApp extends StatelessWidget {
         splashColor: Colors.white70
       ),
       //home: NavigatorDemo(),
+      initialRoute: '/form',
       routes: {
         '/':(context)=> NavigatorDemo(),
         '/about':(context)=>Page(title: 'About',),
         '/home':(context)=>f_scafflod(),
+        '/form':(context)=>FormDemo(),
       },
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/demo/alert_dialog_demo.dart';
+import 'package:flutter_app/demo/bottom_sheet_demo.dart';
 import 'package:flutter_app/demo/datetime_demo.dart';
 import 'package:flutter_app/demo/simple_dialog_demo.dart';
 import 'package:flutter_app/demo/slider_demo.dart';
@@ -32,6 +33,7 @@ class MaterialComponent extends StatelessWidget {
           ListItem(title:'DateTimeDemo',page:DateTimeDemo()),
           ListItem(title:'SimpleDialogDemo',page:SimpleDialogDemo()),
           ListItem(title:'AlertDialogDemo',page:AlertDialogDemo()),
+          ListItem(title:'BottomSheetDemo',page:BottomSheetDemo()),
         ],
       ),
     );

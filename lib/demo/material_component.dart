@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/demo/switch_demo.dart';
 import './button_demo.dart';
 import './floating_action_demo.dart';
 import './popup_menu_demo.dart';
@@ -22,6 +23,7 @@ class MaterialComponent extends StatelessWidget {
           ListItem(title:'FormDemo',page:FormDemo()),
           ListItem(title:'CheckBoxDemo',page:CheckBoxDemo()),
           ListItem(title:'RadioDemo',page:RadioDemo()),
+          ListItem(title:'SwitchDemo',page:SwitchDemo()),
         ],
       ),
     );

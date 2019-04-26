@@ -18,18 +18,30 @@ class _SwitchDemoState extends State<SwitchDemo> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SwitchListTile(
+              value: _switchItemA,
+              onChanged: (value){
+                setState(() {
+                  _switchItemA = value;
+                });
+              },
+              title: Text('switch item A'),
+              subtitle: Text('description'),
+              secondary: Icon(_switchItemA?Icons.visibility:Icons.visibility_off),
+              selected: _switchItemA,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(_switchItemA?'true':'false'),
-                Switch(
+                /*Switch(
                   value: _switchItemA,
                   onChanged: (value){
                     setState(() {
                       _switchItemA = value;
                     });
                   },
-                )
+                )*/
               ],
             )
           ],

@@ -11,6 +11,7 @@ import './popup_menu_demo.dart';
 import 'form_demo.dart';
 import 'checkbox_demo.dart';
 import 'radio_demo.dart';
+import './snack_bar_demo.dart';
 
 class MaterialComponent extends StatelessWidget {
   @override
@@ -34,6 +35,7 @@ class MaterialComponent extends StatelessWidget {
           ListItem(title:'SimpleDialogDemo',page:SimpleDialogDemo()),
           ListItem(title:'AlertDialogDemo',page:AlertDialogDemo()),
           ListItem(title:'BottomSheetDemo',page:BottomSheetDemo()),
+          ListItem(title:'SnackBarDemo',page:SnackBarDemo()),
         ],
       ),
     );

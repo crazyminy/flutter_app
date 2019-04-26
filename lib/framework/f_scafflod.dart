@@ -3,6 +3,8 @@ import 'package:flutter_app/demo/basic_demo.dart';
 import 'package:flutter_app/model/products.dart';
 import '../demo/layoutDemo.dart';
 import '../demo/view_demo.dart';
+import '../demo/sliver_demo.dart';
+import '../demo/listview_demo.dart';
 
 class f_scafflod extends StatelessWidget {
   @override
@@ -42,10 +44,10 @@ class f_scafflod extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            MyListview(),
+            ListViewDemoNew(),
             BasicDemo(),
             LayoutDemo(),
-            ViewDemo(),
+            SliverDemo(),
           ],
         ),
         drawer: MyDraw(),

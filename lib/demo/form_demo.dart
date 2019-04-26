@@ -16,8 +16,14 @@ class FormDemo extends StatelessWidget {
                 RegisterForm()
               ],
             ),
-          )
+          ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.arrow_back),
+        onPressed: (){
+          Navigator.pop(context);
+        },
+      )
     );
   }
 }

@@ -13,6 +13,7 @@ import 'checkbox_demo.dart';
 import 'radio_demo.dart';
 import './snack_bar_demo.dart';
 import './expansion_panel_demo.dart';
+import './chip_demo.dart';
 
 class MaterialComponent extends StatelessWidget {
   @override
@@ -38,6 +39,7 @@ class MaterialComponent extends StatelessWidget {
           ListItem(title:'BottomSheetDemo',page:BottomSheetDemo()),
           ListItem(title:'SnackBarDemo',page:SnackBarDemo()),
           ListItem(title:'ExpansionPanelDemo',page:ExpansionPanelDemo()),
+          ListItem(title:'ChipDemo',page:ChipDemo()),
         ],
       ),
     );

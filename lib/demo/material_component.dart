@@ -15,6 +15,8 @@ import './snack_bar_demo.dart';
 import './expansion_panel_demo.dart';
 import './chip_demo.dart';
 import './data_table_demo.dart';
+import './step_demo.dart';
+
 
 class MaterialComponent extends StatelessWidget {
   @override
@@ -42,6 +44,7 @@ class MaterialComponent extends StatelessWidget {
           ListItem(title:'ExpansionPanelDemo',page:ExpansionPanelDemo()),
           ListItem(title:'ChipDemo',page:ChipDemo()),
           ListItem(title:'DataTableDemo',page:DataTableDemo()),
+          ListItem(title:'StepDemo',page:StepDemo()),
         ],
       ),
     );

@@ -4,6 +4,7 @@ import './demo/sliver_demo.dart';
 import './demo/navigator_demo.dart';
 import './demo/form_demo.dart';
 import './demo/material_component.dart';
+import './demo/state/state_management.dart';
 
 void main()=>runApp(MyApp());
 
@@ -19,13 +20,14 @@ class MyApp extends StatelessWidget {
         splashColor: Colors.white70
       ),
       //home: NavigatorDemo(),
-      initialRoute: '/mdc',
+      initialRoute: '/state-management',
       routes: {
         '/':(context)=> NavigatorDemo(),
         '/about':(context)=>Page(title: 'About',),
         '/home':(context)=>f_scafflod(),
         '/form':(context)=>FormDemo(),
         '/mdc':(context)=>MaterialComponent(),
+        '/state-management':(context)=>StateManagement()
       },
     );
   }

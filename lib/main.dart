@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/framework/f_scafflod.dart';
-import './demo/sliver_demo.dart';
-import './demo/navigator_demo.dart';
+
 import './demo/form_demo.dart';
 import './demo/material_component.dart';
+import './demo/navigator_demo.dart';
 import './demo/state/state_management.dart';
+import './demo/stream/stream_demo.dart';
 
 void main()=>runApp(MyApp());
 
@@ -20,14 +21,15 @@ class MyApp extends StatelessWidget {
         splashColor: Colors.white70
       ),
       //home: NavigatorDemo(),
-      initialRoute: '/state-management',
+      initialRoute: '/stream',
       routes: {
         '/':(context)=> NavigatorDemo(),
         '/about':(context)=>Page(title: 'About',),
         '/home':(context)=>f_scafflod(),
         '/form':(context)=>FormDemo(),
         '/mdc':(context)=>MaterialComponent(),
-        '/state-management':(context)=>StateManagement()
+        '/state-management':(context)=>StateManagement(),
+        '/stream':(context)=>StreamDemo(),
       },
     );
   }

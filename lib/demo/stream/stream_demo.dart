@@ -21,16 +21,20 @@ class StreamDemoHome extends StatefulWidget {
 }
 
 class _StreamDemoHomeState extends State<StreamDemoHome> {
-
+  //声明一个_streamSubscription 作为订阅的接收者
   StreamSubscription _streamSubscription;
 
 
   @override
   void initState() {
     super.initState();
+    //输出 创建stream log
     debugPrint('create stream');
+    //通过Stream.fromFuture 构造一个字符串的流
     Stream<String> _streamDemo = Stream.fromFuture(fetchData());
+    //输出 开始监听
     debugPrint('start listening stream');
+    //监听多个事件
     _streamSubscription = _streamDemo.listen(onData,onError:onError,onDone:onDone);
     debugPrint('Initialize completed.');
   }
@@ -105,14 +109,13 @@ class _StreamControllerDemoState extends State<StreamControllerDemo> {
   StreamSubscription _streamSubscription;
   StreamSink<String> _streamSink;
 
-  String data = '...';
+
 
   @override
   void initState() {
     super.initState();
     
     print('Create a Stream');
-    //_streamDemo = StreamController<String>();
     _streamDemo = StreamController.broadcast();
     _streamSink = _streamDemo.sink;
 
@@ -131,9 +134,7 @@ class _StreamControllerDemoState extends State<StreamControllerDemo> {
     super.dispose();
   }
   void onData(String val){
-    setState(() {
-      data = data + val;
-    });
+
     print('onData:'+val);
   }
 
@@ -183,7 +184,6 @@ class _StreamControllerDemoState extends State<StreamControllerDemo> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            //Text('$data'),
             StreamBuilder(
               stream: _streamDemo.stream,
               builder: (context,snapshot){

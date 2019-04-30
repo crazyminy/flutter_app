@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/demo/rxdart/rxdart_demo.dart';
 import 'package:flutter_app/framework/f_scafflod.dart';
 
 import './demo/form_demo.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         splashColor: Colors.white70
       ),
       //home: NavigatorDemo(),
-      initialRoute: '/stream',
+      initialRoute: '/rxdart',
       routes: {
         '/':(context)=> NavigatorDemo(),
         '/about':(context)=>Page(title: 'About',),
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/mdc':(context)=>MaterialComponent(),
         '/state-management':(context)=>StateManagement(),
         '/stream':(context)=>StreamDemo(),
+        '/rxdart':(context)=>RxDartDemo()
       },
     );
   }
@@ -37,8 +39,7 @@ class MyApp extends StatelessWidget {
 
 /*
 class Home extends StatelessWidget {
-
-  Widget _listItemBuilder(context,index){
+t,index){
     //return Text(posts[index].title);
     return Container(
       color: Colors.white,
